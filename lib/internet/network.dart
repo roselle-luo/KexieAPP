@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class AppNetwork {
   static const String kexieBaseUrl = "https://at.kexie.space";
-  static const String appBaseUrl = 'http://172.16.0.108:20051';
+  static const String appBaseUrl = 'http://jzhangluo.com:20051';
 
   late Dio kexieDio;
   late Dio appDio;

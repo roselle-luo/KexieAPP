@@ -120,11 +120,12 @@ class PostDetailController extends GetxController {
     }
   }
 
-  Future<void> replyPost(int parentId, String text, List<String> images) async {
+  Future<void> replyPost(int parentId, String text) async {
     try {
       isSending.value = true;
       if (images.isNotEmpty) {
         imageUrls.value = await uploadImages();
+        print(imageUrls.first.toString());
         if (imageUrls.isEmpty) {
           return;
         }
@@ -132,7 +133,7 @@ class PostDetailController extends GetxController {
       Map<String, dynamic> data = {
         "parent_id": parentId,
         "text": text,
-        "images": images,
+        "images": imageUrls,
       };
       final response = await dio.post('/forum/upload_post', data: data);
       if (response.data['code'] == 200) {
@@ -170,7 +171,6 @@ class PostDetailController extends GetxController {
     pagingController.addPageRequestListener((pageKey) {
       fetchReplies(pageKey);
     });
-    print("当前帖子Id:" + post.parentId.toString());
     try {
       viewPost(post.iD);
     } catch (e) {

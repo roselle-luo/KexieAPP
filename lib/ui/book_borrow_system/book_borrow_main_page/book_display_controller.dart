@@ -19,11 +19,12 @@ class BookBorrowController extends GetxController{
       final dio = AppNetwork.get().appDio;
       final response = await dio.get('/book/get_books');
       if (response.statusCode == 200) {
+        bookInformation.value.data.clear();
         bookInformation.value = BookInfomation.fromJson(response.data);
         List<Data> originalData = List.from(bookInformation.value.data);
-        for (int i=0;i<100;i++) {
-          bookInformation.value.data.addAll(originalData);
-        }
+        // for (int i=0;i<5;i++) {
+        //   bookInformation.value.data.addAll(originalData);
+        // }
       } else {
         toastFailure(message: response.data['msg']);
       }
@@ -46,6 +47,7 @@ class BookBorrowController extends GetxController{
       });
       final response = await dio.post('/book/add_books',data: formData);
       if (response.data['code'] == 200) {
+        await getBooks();
         toastSuccess(message: '添加成功');
       } else {
         toastFailure(message: response.data['msg']);

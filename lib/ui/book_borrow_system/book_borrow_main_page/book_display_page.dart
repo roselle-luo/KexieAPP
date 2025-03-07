@@ -25,39 +25,38 @@ class _BookBorrowPageState extends State<BookBorrowPage> {
         ? Scaffold(
             appBar: AppBar(
               title: const Text('科协书城'),
-              actions: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                  child: IconButton(
-                      onPressed: () => debugPrint('aaaaaaaa'),
-                      icon: const Icon(
-                        Icons.search,
-                        size: 30,
-                      )),
-                ),
-                Obx(
-                  () => Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    child: IconButton(
-                        onPressed: () {
-                          c.isColumn.value = !c.isColumn.value;
-                        },
-                        icon: c.isColumn.value
-                            ? const Icon(
-                                Icons.grid_view_rounded,
-                                size: 30,
-                              )
-                            : const Icon(
-                                Icons.menu_outlined,
-                                size: 30,
-                              )),
-                  ),
-                ),
-              ],
+              // actions: [
+              //   Padding(
+              //     padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              //     child: IconButton(
+              //         onPressed: () => debugPrint('aaaaaaaa'),
+              //         icon: const Icon(
+              //           Icons.search,
+              //           size: 30,
+              //         )),
+              //   ),
+              //   Obx(
+              //     () => Padding(
+              //       padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              //       child: IconButton(
+              //           onPressed: () {
+              //             c.isColumn.value = !c.isColumn.value;
+              //           },
+              //           icon: c.isColumn.value
+              //               ? const Icon(
+              //                   Icons.grid_view_rounded,
+              //                   size: 30,
+              //                 )
+              //               : const Icon(
+              //                   Icons.menu_outlined,
+              //                   size: 30,
+              //                 )),
+              //     ),
+              //   ),
+              // ],
             ),
             floatingActionButton: FloatingActionButton(
               shape: CircleBorder(),
-
               onPressed: () async {
                 String result = await c.scanBookQrCode();
                 if (result.isNotEmpty) {
@@ -77,16 +76,21 @@ class _BookBorrowPageState extends State<BookBorrowPage> {
                   children: [
                     Expanded(
                         child: Obx(
-                      () => GridView.builder(
-                        itemCount: c.bookInformation.value.data.length,
-                        gridDelegate:
-                            const SliverGridDelegateWithMaxCrossAxisExtent(
-                          maxCrossAxisExtent: 100, //横轴有几个
-                          crossAxisSpacing: 30, //次轴方向间距
-                          childAspectRatio: 0.45,
+                      () => RefreshIndicator(
+                        onRefresh: () async {
+                          await c.getBooks();
+                        },
+                        child: GridView.builder(
+                          itemCount: c.bookInformation.value.data.length,
+                          gridDelegate:
+                              const SliverGridDelegateWithMaxCrossAxisExtent(
+                            maxCrossAxisExtent: 100, //横轴有几个
+                            crossAxisSpacing: 30, //次轴方向间距
+                            childAspectRatio: 0.45,
+                          ),
+                          itemBuilder: (context, index) => singleBookWidget(
+                              c.bookInformation.value.data[index], context),
                         ),
-                        itemBuilder: (context, index) => singleBookWidget(
-                            c.bookInformation.value.data[index], context),
                       ),
                     )),
                   ],

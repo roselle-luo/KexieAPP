@@ -508,7 +508,8 @@ class _SignRankPageState extends State<SignRankPage>
         sideTitles: SideTitles(
       showTitles: true,
       getTitlesWidget: (value, meta) {
-        if (topFiveData.length <= 5) {
+        if (topFiveData.length <= 6) {
+          print(topFiveData.length);
           return SideTitleWidget(
             space: 5,
             axisSide: meta.axisSide,
@@ -517,7 +518,9 @@ class _SignRankPageState extends State<SignRankPage>
               style: const TextStyle(fontSize: 14, color: Colors.lightBlue),
             ),
           );
-        } else
+        } else {
+          print(topFiveData.length);
+          print(333444);
           return c.isSingleNumber(value.toInt() + 1)
               ? SideTitleWidget(
                   space: 5,
@@ -529,6 +532,7 @@ class _SignRankPageState extends State<SignRankPage>
                   ),
                 )
               : SizedBox();
+        }
       },
     ));
   }

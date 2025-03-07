@@ -143,8 +143,7 @@ class PostDetailPage extends StatelessWidget {
                                             : () {
                                                 c.replyPost(
                                                     post.iD,
-                                                    c.replyController.text,
-                                                    c.imageUrls);
+                                                    c.replyController.text);
                                               },
                                         icon: const Icon(
                                           Icons.send,

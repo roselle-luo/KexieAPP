@@ -1,4 +1,4 @@
-name: Release Android APK
+name: Release KexieApp Android APK
 # MINIO_ENDPOINT
 # MINIO_ACCESS_KEY
 # MINIO_SECRET_KEY
@@ -82,13 +82,13 @@ jobs:
       - name: Rename Apk And Move Apk
         run: |
           mkdir -p build/app/outputs/my-release
-          mv build/app/outputs/flutter-apk/app-release.apk build/app/outputs/my-release/fuckketangpai-android-v${{ env.PUBSPEC_VERSION }}.apk
+          mv build/app/outputs/flutter-apk/app-release.apk build/app/outputs/my-release/kexieapp-android-v${{ env.PUBSPEC_VERSION }}.apk
 
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
           tag: ${{ github.ref_name }}
-          files: build/app/outputs/my-release/fuckketangpai-android-v${{ env.PUBSPEC_VERSION }}.apk
+          files: build/app/outputs/my-release/kexieapp-android-v${{ env.PUBSPEC_VERSION }}.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -79,13 +79,16 @@ class _DetailBookPageState extends State<DetailBookPage> {
                 ]),
               ),
               const SizedBox(height: 16),
-              Text(
-                widget.book.name,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                child: Text(
+                  widget.book.name,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               const SizedBox(height: 16),

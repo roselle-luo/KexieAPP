@@ -9,7 +9,7 @@ class ProfileController extends GetxController {
 
   SignController signController = Get.find();
 
-  final shareText = "亲爱的科协成员，这是属于桂电三院科协的App。\n\n在上面能够完成签到打卡，能够查看签到记录以及签到时长排名。\n\n成为正式成员后你还能在独属科协的论坛里面发帖冲浪。\n\n上面还有一系列工具助你在学校在社团的生活更加便捷。\n\n快来下载试试吧。\n\n 下载地址：\n http://blog.jzhangluo.com";
+  final shareText = "亲爱的科协成员，这是属于桂电三院科协的App。\n\n在上面能够完成签到打卡，能够查看签到记录以及签到时长排名。\n\n成为正式成员后你还能在独属科协的论坛里面发帖冲浪。\n\n上面还有一系列工具助你在学校在社团的生活更加便捷。\n\n快来下载试试吧。\n\n github地址：\n https://github.com/1zhangluo1/KexieAPP";
   
   void shareApp(BuildContext context) {
     Share.share(

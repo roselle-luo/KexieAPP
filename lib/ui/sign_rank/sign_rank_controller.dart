@@ -37,7 +37,7 @@ class SignRankController extends GetxController {
           this.topFiveUsers.sort( (a,b) => double.parse(b.totalTime).compareTo(double.parse(a.totalTime))); //降序排序
           for (int i = 0; i < this.topFiveUsers.length; i++) {
             this.topFiveUsers[i].order = i + 1;
-            print(this.topFiveUsers[i].totalTime);
+           //print(this.topFiveUsers[i].totalTime);
           } //将排序序号赋予对应的顺序属性
         }
       } else {
