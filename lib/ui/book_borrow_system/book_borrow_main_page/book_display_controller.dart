@@ -2,7 +2,7 @@ import 'package:dio/dio.dart' as dios;
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
 import 'package:get/get_rx/get_rx.dart';
-import 'package:kexie_app/Internet/network.dart';
+import 'package:kexie_app/internet/network.dart';
 import 'package:kexie_app/models/book_infomation/book_infomation.dart';
 import 'package:kexie_app/widgets/toast.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';

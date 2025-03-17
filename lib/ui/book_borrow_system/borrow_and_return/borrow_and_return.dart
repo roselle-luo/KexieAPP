@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:kexie_app/Internet/network.dart';
+import 'package:kexie_app/internet/network.dart';
 import 'package:kexie_app/widgets/toast.dart';
 
 class BorrowAndReturn {

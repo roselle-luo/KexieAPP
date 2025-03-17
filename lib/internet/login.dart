@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:kexie_app/Internet/network.dart';
+import 'package:kexie_app/internet/network.dart';
 import 'package:kexie_app/global/global.dart';
 import 'package:kexie_app/service/user.dart';
 import 'package:kexie_app/widgets/toast.dart';

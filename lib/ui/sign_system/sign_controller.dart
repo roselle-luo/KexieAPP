@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart' as dios;
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:kexie_app/Internet/network.dart';
+import 'package:kexie_app/internet/network.dart';
 import 'package:kexie_app/global/global.dart';
 import 'package:kexie_app/models/onlineUsers/onlineUsers.dart';
 import 'package:kexie_app/widgets/toast.dart';

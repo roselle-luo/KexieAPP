@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:kexie_app/Internet/network.dart';
+import 'package:kexie_app/internet/network.dart';
 import 'package:kexie_app/service/user.dart';
 import 'package:kexie_app/widgets/image_view.dart';
 import 'package:kexie_app/widgets/loading_view.dart';

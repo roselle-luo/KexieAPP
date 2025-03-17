@@ -2,7 +2,7 @@ import 'package:dio/dio.dart' as dios;
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
-import 'package:kexie_app/Internet/network.dart';
+import 'package:kexie_app/internet/network.dart';
 import 'package:kexie_app/models/recruitInfo/recruitInfo.dart';
 import 'package:kexie_app/ui/recruit/update_dialog.dart';
 import 'package:kexie_app/widgets/loading_view.dart';

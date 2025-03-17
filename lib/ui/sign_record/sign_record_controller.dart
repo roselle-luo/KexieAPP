@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart' as dios;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../Internet/network.dart';
+import '../../internet/network.dart';
 import '../../global/global.dart';
 import '../../models/signRecords/signRecords.dart';
 import '../../widgets/toast.dart';

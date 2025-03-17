@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:kexie_app/Internet/network.dart';
+import 'package:kexie_app/internet/network.dart';
 import 'package:kexie_app/global/global.dart';
 import 'package:kexie_app/widgets/toast.dart';
 import 'package:shared_preferences/shared_preferences.dart';

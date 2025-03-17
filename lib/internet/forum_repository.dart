@@ -1,4 +1,4 @@
-import 'package:kexie_app/Internet/network.dart';
+import 'package:kexie_app/internet/network.dart';
 import 'package:kexie_app/models/forum_posts/forum_posts.dart';
 
 class ForumRepository {

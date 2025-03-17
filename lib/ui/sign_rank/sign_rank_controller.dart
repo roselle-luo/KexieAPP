@@ -2,7 +2,7 @@ import 'package:dio/dio.dart' as dios;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kexie_app/models/topFiveUsers/topFiveUsers.dart';
-import '../../Internet/network.dart';
+import '../../internet/network.dart';
 import '../../widgets/toast.dart';
 
 class SignRankController extends GetxController {

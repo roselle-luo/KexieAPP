@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:kexie_app/Internet/network.dart';
+import 'package:kexie_app/internet/network.dart';
 import 'package:kexie_app/global/global.dart';
 import 'package:kexie_app/models/borrow_record/borrow_record.dart';
 import 'package:kexie_app/widgets/toast.dart';

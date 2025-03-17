@@ -5,7 +5,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:flutter/material.dart';
 import 'package:kexie_app/internet/forum_repository.dart';
-import '../../Internet/network.dart';
+import '../../internet/network.dart';
 import '../../models/forum_posts/forum_posts.dart';
 import '../../widgets/toast.dart';
 import 'package:dio/dio.dart' as dios;
